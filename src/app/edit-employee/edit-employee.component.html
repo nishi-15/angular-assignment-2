@@ -1,0 +1,28 @@
+
+<div class="container">
+  <form action="" [formGroup]="formGroup">
+    <div class="form-group">
+      <label for="firstName"> First Name: </label>
+      <input type="text" id="firstName" name="firstName" formControlName="firstName" class="form-control" [(ngModel)]="employee.firstName" />
+    </div>
+
+    <div class="form-group">
+      <label for="lastName"> Last Name: </label>
+      <input type="text" id="lastName" name="lastName" formControlName="lastName" class="form-control" [(ngModel)]="employee.lastName" />
+    </div>
+
+    <div class="form-group">
+      <label for="email"> E-Mail: </label>
+      <input type="email" id="email" name="email" formControlName="email" class="form-control" [(ngModel)]="employee.email" />
+    </div>
+
+    <div class="form-group">
+      <label for="contactNumber"> Contact Number: </label>
+      <input type="tel" id="contactNumber" formControlName="contactNumber" name="contactNumber" class="form-control"
+        [(ngModel)]="employee.contactNumber" />
+    </div>
+  </form>
+  <button class="btn btn-primary" type="button" (click)="updateEmployee()">Save</button>
+  <button class="btn btn-primary" type="button" (click)="cancel()">Cancel</button>
+  <br>
+</div>

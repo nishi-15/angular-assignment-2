@@ -1,0 +1,27 @@
+<div class="container">
+  <table class="table table-responsive">
+    <thead>
+      <tr>
+        <th>Employee Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Contact Number</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of allEmployeeDetails">
+        <td scope="row">{{employee.employeeId}}</td>
+        <td>{{employee.firstName}}</td>
+        <td>{{employee.lastName}}</td>
+        <td>{{employee.email}}</td>
+        <td>{{employee.contactNumber}}</td>
+        <td>
+          <button type="button" class="btn btn-info" [routerLink]="['/editEmployee/'+employee.employeeId]">Edit</button>
+          <button type="button" class="btn btn-danger" (click)="deleteEmployee(employee)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
